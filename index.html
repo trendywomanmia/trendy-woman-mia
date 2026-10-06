@@ -345,7 +345,20 @@ td.off{color:#C9CDD3;font-size:13px}
 
 /* ---------- PT trainer quotes ---------- */
 .pq-head{text-align:center;margin:26px 0 12px;font-size:12.5px;font-weight:800;letter-spacing:.06em;color:#FF8A98}
-.pt-quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.tcards{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.tcard{background:rgba(255,255,255,.05);border:1px solid var(--line-d);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;transition:transform .45s cubic-bezier(.22,1,.36,1),background .45s,border-color .45s}
+.tcard:hover{transform:translateY(-6px);background:rgba(255,255,255,.08);border-color:rgba(255,110,128,.4)}
+.tphoto{position:relative;display:block;height:220px;overflow:hidden}
+.tphoto img{width:100%;height:100%;object-fit:cover;object-position:center 30%;display:block;transition:transform .5s cubic-bezier(.22,1,.36,1)}
+.tphoto:hover img{transform:scale(1.05)}
+.tphoto-cap{position:absolute;left:12px;bottom:12px;padding:4px 11px;border-radius:999px;background:rgba(3,199,90,.92);color:#fff;font-size:10.5px;font-weight:800;letter-spacing:.04em}
+.tbody{padding:16px 18px 18px;flex:1}
+.tname{font-size:16px;font-weight:800;color:#fff;letter-spacing:-.03em;margin-bottom:12px}
+.tname em{font-style:normal;margin-left:6px;font-size:11px;font-weight:800;color:#FF8A98;background:rgba(198,40,85,.22);padding:3px 9px;border-radius:999px;vertical-align:middle}
+.trv{list-style:none;margin:0;padding:0;display:grid;gap:12px}
+.trv li{border-left:2px solid rgba(255,110,128,.5);padding-left:12px}
+.trv p{margin:0;font-size:13px;color:rgba(255,255,255,.82);line-height:1.65}
+.trv cite{display:block;margin-top:4px;font-size:11px;font-style:normal;color:var(--muted-d)}
 .pq .tn-new{font-style:normal;margin-left:5px;font-size:9.5px;font-weight:800;letter-spacing:.08em;padding:2px 6px;border-radius:5px;background:#fff;color:var(--accent-2)}
 .pq{position:relative;margin:0;padding:18px 18px 16px;border-radius:var(--r);background:rgba(255,255,255,.06);border:1px solid var(--line-d);display:flex;flex-direction:column}
 .pq-photo{position:relative;display:block;float:right;width:104px;height:132px;margin:2px 0 8px 14px;border-radius:12px;overflow:hidden;border:1px solid var(--line-d);flex:none}
@@ -500,7 +513,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
 @media (max-width:820px){
   .menu,.nav-right .btn{display:none}
   .rp-grid{grid-template-columns:1fr}
-  .pt-quotes{grid-template-columns:1fr}
+  .tcards{grid-template-columns:1fr}
   .ph-row{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:14px;padding:4px 2px 14px;margin:0 -20px;padding-left:20px;padding-right:20px}
   .ph{flex:0 0 46vw;max-width:210px;scroll-snap-align:start}
   .burger{display:grid}
@@ -711,28 +724,52 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
       </div>
     </div>
     <p class="pq-head rv">이민정 · 백선경 · 김지연 · 김용태 · 김지선 — 미아사거리역점 트레이너</p>
-    <div class="pt-quotes">
-      <blockquote class="pq rv">
-        <span class="tn">이민정 트레이너</span>
-        <p>처음 인바디 측정하고 상담하면서 현실적인 목표를 잡아주셨고, 무리하지 않게 단계별로 운동 강도를 올려주셔서 포기하지 않고 꾸준히 할 수 있었어요. 자세랑 자극 오는 부위를 계속 체크해주셔서 <b>같은 동작이라도 효과가 다르다는 걸</b> 느꼈습니다.</p>
-        <footer>강다룽 님 · ★★★★★</footer>
-      </blockquote>
-      <blockquote class="pq rv">
-        <span class="tn">김용태 트레이너</span>
-        <p>항상 다이어트를 결심해도 작심삼일이었는데, 용태쌤과 함께하니 순조롭게 진행 중이에요. <b>체중뿐 아니라 눈으로 보일 정도로 체지방이 줄어드는 게 느껴져서</b> 만족도가 매우 높습니다. 힘들 때마다 옆에서 으쌰으쌰 해주셔서 끝까지 해냅니다.</p>
-        <footer>유로11 님 · 방문 3회 · ★★★★★</footer>
-      </blockquote>
-      <blockquote class="pq rv">
-        <span class="tn">김지연 트레이너</span>
-        <p>허리·무릎·어깨·목까지 안 아픈 곳이 없었는데, 특히 허리가 한번 고장난 뒤로 계속 아팠어요. <b>PT 받고서 정상인 되어가고 있습니다!</b> 아픈 날에도 안 아프게 자세를 가르쳐주셔서 꾸준히 운동하러 올 수 있어요.</p>
-        <footer>oㅠo 님 · ★★★★★</footer>
-      </blockquote>
-      <blockquote class="pq rv">
-        <span class="tn">백선경 트레이너</span>
-        <p>저의 구세주 선경쌤.. PT 한 타임마다 그날 컨디션에 맞게 단계별로 발전시켜주시고, <b>잠깐이었지만 다이어트도 성공</b>했어서 최고였습니다. 헬스장 여러 군데 다녀봤지만 여기만큼 오래 다니고 싶은 곳은 처음이에요.</p>
-        <footer>무모한모험가 님 · 방문 3회 · ★★★★★</footer>
-      </blockquote>
+    <div class="tcards">
+      <div class="tcard rv">
+        <a class="tphoto" href="https://map.naver.com/p/entry/place/1885902314?placePath=%2Freview" target="_blank" rel="noopener"><img src="tr-minjung.jpg" alt="이민정 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="tphoto-cap">네이버 리뷰</span></a>
+        <div class="tbody">
+          <div class="tname">이민정 트레이너 <em>번지피지오 · PT</em></div>
+          <ul class="trv">
+            <li><p>첫 PT를 받아봤는데 모르고 있던 자극이나 자세를 잡아주시면서 상세하게 설명해 주셔서 너무 좋았어요.</p><cite>thth55 님 · ★★★★★</cite></li>
+            <li><p>인바디 측정 후 현실적인 목표를 잡아주시고 단계별로 강도를 올려주셔서, 같은 동작이라도 효과가 다르다는 걸 느꼈어요.</p><cite>강다룽 님 · ★★★★★</cite></li>
+            <li><p>재활 OT 1회 받고 걸을 때 불편하던 부분이 나아지는 걸 느껴서 바로 PT를 결정했어요.</p><cite>cubesuzai 님 · ★★★★★</cite></li>
+          </ul>
         </div>
+      </div>
+      <div class="tcard rv">
+        <a class="tphoto" href="https://map.naver.com/p/entry/place/1885902314?placePath=%2Freview" target="_blank" rel="noopener"><img src="tr-yongtae.jpg" alt="김용태 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="tphoto-cap">네이버 리뷰</span></a>
+        <div class="tbody">
+          <div class="tname">김용태 트레이너 <em>1:1 PT</em></div>
+          <ul class="trv">
+            <li><p>작심삼일이었던 다이어트가 용태쌤과 하니 순조롭게 진행 중이고, 눈에 보일 정도로 체지방이 줄어드는 게 느껴져요.</p><cite>유로11 님 · ★★★★★</cite></li>
+            <li><p>작년부터 PT하며 다이어트도 처음 성공했고 체형도 교정됐어요. 계단도 힘들던 제가 이젠 10km를 걸어도 안 힘들어요.</p><cite>귤ㅇi조ㅇr 님 · ★★★★★</cite></li>
+            <li><p>20회쯤 받으니 체력도 좋아지고 체형이 교정된 게 느껴져요. 수업 끝나면 라포로 그날 운동을 정리해 주세요.</p><cite>s0fgk 님 · ★★★★★</cite></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tcard rv">
+        <a class="tphoto" href="https://map.naver.com/p/entry/place/1885902314?placePath=%2Freview" target="_blank" rel="noopener"><img src="tr-jiyeon.jpg" alt="김지연 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="tphoto-cap">네이버 리뷰</span></a>
+        <div class="tbody">
+          <div class="tname">김지연 트레이너 <em>1:1 PT</em></div>
+          <ul class="trv">
+            <li><p>허리·무릎·어깨·목까지 안 아픈 곳이 없었는데, PT하고서 정상인 되어가고 있어요. 아픈 날에도 안 아프게 봐주세요.</p><cite>oㅠo 님 · ★★★★★</cite></li>
+            <li><p>두 달 운동했는데 자세를 엄청 꼼꼼히 봐주셔서, 말씀대로 하니 하나도 안 아프고 자극도 잘 와요.</p><cite>jungje517 님 · ★★★★★</cite></li>
+            <li><p>여성 맞춤으로 자세를 교정해 주시고 필요한 부분만 콕 짚어 알려주셔서 너무 좋아요.</p><cite>shi**** 님 · ★★★★★</cite></li>
+          </ul>
+        </div>
+      </div>
+      <div class="tcard rv">
+        <a class="tphoto" href="https://map.naver.com/p/entry/place/1885902314?placePath=%2Freview" target="_blank" rel="noopener"><img src="tr-sunkyung.jpg" alt="백선경 트레이너 PT 회원 후기 사진" loading="lazy" onerror="this.parentNode.remove()"><span class="tphoto-cap">네이버 리뷰</span></a>
+        <div class="tbody">
+          <div class="tname">백선경 트레이너 <em>재활 · PT</em></div>
+          <ul class="trv">
+            <li><p>저의 구세주 선경쌤. 그날 컨디션에 맞게 단계별로 발전시켜주시고, 잠깐이었지만 다이어트도 성공했어요.</p><cite>무모한모험가 님 · ★★★★★</cite></li>
+            <li><p>선경쌤께 운동 받는데 재활 교정 운동으로 체중 감량도 잘되는 것 같아요. 여성전용이라 눈치 안 봐서 더 좋아요.</p><cite>bac**** 님 · ★★★★★</cite></li>
+            <li><p>골반이 너무 아팠는데 재활 전문이신 선경쌤이 골반 맞춤 운동을 알려주세요. 힘들어도 할 수 있다고 응원해 주십니다.</p><cite>sksrnfmadldi 님 · ★★★★★</cite></li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </section>
 
