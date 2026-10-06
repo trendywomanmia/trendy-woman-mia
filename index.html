@@ -546,15 +546,14 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
   .sticky-cta{font-size:14px;padding:14px 16px}
 }
 /* ===== RESULTS (BEFORE & AFTER) ===== */
-.ba-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:6px}
-.ba-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(15,17,21,.06)}
+.ba-grid{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 20px 16px;margin:6px -20px 0;scrollbar-width:thin}
+.ba-grid::-webkit-scrollbar{height:6px}
+.ba-grid::-webkit-scrollbar-thumb{background:rgba(198,40,85,.3);border-radius:99px}
+.ba-card{flex:0 0 min(380px,84vw);scroll-snap-align:start;background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(15,17,21,.06)}
 .ba-card .ba-img{display:block;width:100%;height:auto;background:var(--gray)}
 .ba-card figcaption{display:flex;align-items:center;justify-content:center;gap:9px;padding:14px 16px;font-size:13.5px;font-weight:700;color:var(--muted);border-top:1px solid var(--line)}
 .ba-card figcaption b{color:var(--accent-2);font-weight:800}
-.ba-disc{margin-top:22px;font-size:12.3px;color:var(--muted);text-align:center;line-height:1.6}
-@media (max-width:640px){
-  .ba-grid{grid-template-columns:1fr;gap:16px}
-}
+.ba-disc{margin-top:18px;font-size:12.3px;color:var(--muted);text-align:center;line-height:1.6}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
   html{scroll-behavior:auto}
@@ -984,6 +983,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
         <figcaption>10주 · 체중 <b>-9.8kg</b> · 체지방 <b>-8.9kg</b></figcaption>
       </figure>
     </div>
+    <p class="note rv" style="margin-top:4px">좌우로 밀어서 더 많은 변화 사례를 보실 수 있습니다 →</p>
     <p class="ba-disc">※ 운동 효과는 개인의 생활 습관·식단·신체 조건에 따라 다를 수 있으며, 위 결과는 실제 회원님들의 동의를 받아 게시한 기록입니다.</p>
   </div>
 </section>
