@@ -545,6 +545,16 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
   .gcard{flex:0 0 220px;height:260px}
   .sticky-cta{font-size:14px;padding:14px 16px}
 }
+/* ===== RESULTS (BEFORE & AFTER) ===== */
+.ba-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:22px;margin-top:6px}
+.ba-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 8px 30px rgba(15,17,21,.06)}
+.ba-card .ba-img{display:block;width:100%;height:auto;background:var(--gray)}
+.ba-card figcaption{display:flex;align-items:center;justify-content:center;gap:9px;padding:14px 16px;font-size:13.5px;font-weight:700;color:var(--muted);border-top:1px solid var(--line)}
+.ba-card figcaption b{color:var(--accent-2);font-weight:800}
+.ba-disc{margin-top:22px;font-size:12.3px;color:var(--muted);text-align:center;line-height:1.6}
+@media (max-width:640px){
+  .ba-grid{grid-template-columns:1fr;gap:16px}
+}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation-duration:.001ms!important;animation-iteration-count:1!important;transition-duration:.001ms!important}
   html{scroll-behavior:auto}
@@ -580,6 +590,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
       <a href="#class">CLASS</a>
       <a href="#schedule">SCHEDULE</a>
       <a href="#review">REVIEW</a>
+      <a href="#results">RESULTS</a>
       <a href="#price">PRICE</a>
       <a href="#faq">FAQ</a>
     </nav>
@@ -597,6 +608,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
   <a href="#class">클래스<em>CLASS</em></a>
   <a href="#schedule">시간표<em>SCHEDULE</em></a>
   <a href="#review">후기<em>REVIEW</em></a>
+  <a href="#results">회원 변화<em>RESULTS</em></a>
   <a href="#price">요금<em>PRICE</em></a>
   <a href="#faq">자주 묻는 질문<em>FAQ</em></a>
   <a data-talk href="#" target="_blank" rel="noopener">톡톡 상담<em>CONTACT</em></a>
@@ -943,6 +955,36 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
       </div>
     </div>
     <p class="note rv">좌우로 밀어서 더 보실 수 있습니다 · <a href="https://map.naver.com/p/entry/place/1885902314?placePath=%2Freview" target="_blank" rel="noopener" style="color:var(--accent-2);font-weight:800">네이버에서 전체 리뷰 보기 →</a></p>
+  </div>
+</section>
+
+<!-- ===== RESULTS (BEFORE & AFTER) ===== -->
+<section class="bg-white" id="results">
+  <div class="wrap">
+    <div class="head rv">
+      <span class="eyebrow">Real Results · Before &amp; After</span>
+      <h2 class="h2">회원님들의 <span class="g">진짜 변화</span>,<br>숫자로 증명합니다</h2>
+      <p>미아사거리역점 회원님들이 1:1 PT와 식단 관리로 10주 만에 만들어낸 변화입니다.<br>포토샵 없는 실제 비포&amp;애프터 기록이에요.</p>
+    </div>
+    <div class="ba-grid">
+      <figure class="ba-card rv">
+        <img class="ba-img" src="ba-1.jpg" alt="미아사거리역점 회원 10주 비포애프터 - 체지방 6.6kg 감량" loading="lazy" onerror="this.closest('.ba-card').remove()">
+        <figcaption>10주 · 체지방 <b>-6.6kg</b> · 체지방률 <b>-8.4%</b></figcaption>
+      </figure>
+      <figure class="ba-card rv">
+        <img class="ba-img" src="ba-2.jpg" alt="미아사거리역점 회원 10주 비포애프터 - 체중 6.1kg 감량" loading="lazy" onerror="this.closest('.ba-card').remove()">
+        <figcaption>10주 · 체중 <b>-6.1kg</b> · 체지방 <b>-4.9kg</b></figcaption>
+      </figure>
+      <figure class="ba-card rv">
+        <img class="ba-img" src="ba-3.jpg" alt="미아사거리역점 회원 10주 비포애프터 - 체중 8kg 감량" loading="lazy" onerror="this.closest('.ba-card').remove()">
+        <figcaption>10주 · 체중 <b>-8kg</b> · 체지방 <b>-6.8kg</b></figcaption>
+      </figure>
+      <figure class="ba-card rv">
+        <img class="ba-img" src="ba-4.jpg" alt="미아사거리역점 회원 10주 비포애프터 - 체중 9.8kg 감량" loading="lazy" onerror="this.closest('.ba-card').remove()">
+        <figcaption>10주 · 체중 <b>-9.8kg</b> · 체지방 <b>-8.9kg</b></figcaption>
+      </figure>
+    </div>
+    <p class="ba-disc">※ 운동 효과는 개인의 생활 습관·식단·신체 조건에 따라 다를 수 있으며, 위 결과는 실제 회원님들의 동의를 받아 게시한 기록입니다.</p>
   </div>
 </section>
 
