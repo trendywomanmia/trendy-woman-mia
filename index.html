@@ -415,6 +415,19 @@ td.off{color:#C9CDD3;font-size:13px}
 .ben .big{font-size:clamp(19px,2.6vw,25px);font-weight:800;letter-spacing:-.04em;line-height:1.35}
 .ben .big em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
 .ben small{display:block;margin-top:11px;font-size:12.6px;color:var(--muted)}
+.ben.feat{grid-column:1 / -1;background:var(--dark);border:none;position:relative;overflow:hidden;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:14px}
+.ben.feat::before{content:"";position:absolute;inset:0;background:radial-gradient(120% 140% at 100% 0,rgba(228,34,47,.28),transparent 55%)}
+.ben.feat > *{position:relative}
+.ben.feat h4{color:rgba(255,255,255,.8)}
+.ben.feat .big{color:#fff}
+.ben.feat .big em{-webkit-text-fill-color:transparent}
+.ben.feat small{color:rgba(255,255,255,.62)}
+.ben.feat .tit{background:#fff;color:var(--accent-2)}
+.ben.feat .feat-l{flex:1 1 300px}
+.ben.feat .feat-r{flex:0 0 auto;text-align:right}
+.ben.feat .feat-r .big{font-size:clamp(24px,4vw,34px)}
+.ben.feat .limit{display:inline-block;margin-top:10px;font-size:12px;font-weight:800;color:#fff;background:rgba(228,34,47,.9);padding:5px 12px;border-radius:999px;letter-spacing:.02em}
+@media(max-width:560px){.ben.feat .feat-r{text-align:left;flex-basis:100%}}
 
 /* ---------- faq ---------- */
 .faq-list{display:grid;gap:7px;max-width:860px;margin:0 auto}
@@ -993,7 +1006,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
     <div class="head rv">
       <span class="eyebrow">Special Offer &amp; Membership</span>
       <h2 class="h2">꾸준함은 의지가 아니라,<br><span class="g">환경</span>으로 만듭니다</h2>
-      <p>아래 두 가지 혜택은 지금 진행 중입니다. 그 외 회원권 금액은 예시이며, 정확한 요금은 상담 시 안내드립니다.</p>
+      <p>아래 세 가지 혜택은 지금 진행 중입니다. 그 외 회원권 금액은 예시이며, 정확한 요금은 상담 시 안내드립니다.</p>
     </div>
     <div class="ben-grid">
       <div class="ben rv">
@@ -1007,6 +1020,17 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
         <h4>헬스 회원권만 등록하셔도<br>기구 사용법부터 알려드립니다</h4>
         <div class="big"><em>PT 2회</em> 무료 제공</div>
         <small>여성 전문 트레이너 1:1 진행 · 등록 강요 없음</small>
+      </div>
+      <div class="ben feat rv">
+        <div class="feat-l">
+          <span class="tit">혜택 03 · 최대 할인</span>
+          <h4>1년에 단 한 번, 가장 큰 혜택<br>선착순 한정으로 진행됩니다</h4>
+          <span class="limit">⚡ 선착순 인원 마감 시 진행 불가</span>
+        </div>
+        <div class="feat-r">
+          <div class="big">월 <em>29,900원</em></div>
+          <small>1년에 한 번 진행하는 최대 할인가</small>
+        </div>
       </div>
     </div>
     <div class="mship rv">
@@ -1023,7 +1047,7 @@ footer{background:var(--dark);color:rgba(255,255,255,.56);padding:36px 0 26px;fo
     </div>
     <p class="opt-line rv">부가 옵션 — 회원 운동복 대여 · 개인 물품 보관함 · 수건 대여 <b>각 10,000원/월</b></p>
     <p class="price-foot rv">
-      ✅ 혜택 01 · 02는 <b>1인 1회 한정</b>으로 제공됩니다<br>
+      ✅ 혜택 01 · 02는 <b>1인 1회 한정</b>, 혜택 03은 <b>1년 1회 · 선착순 한정</b>으로 제공됩니다<br>
       ※ 회원권 금액은 상담을 통해 개별 안내드립니다. 혜택 금액은 부가세 포함 기준입니다.
     </p>
   </div>
